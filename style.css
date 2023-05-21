@@ -1,0 +1,46 @@
+:root{
+    --color: rgb(251, 255, 37);
+}
+
+.cursor{
+    background-color: var(--color);
+    z-index: 9999999;
+    box-shadow: 0px 0px 20px var(--color),
+                0px 0px 60px var(--color),
+                0px 0px 90px var(--color);
+    animation: animate 3s ease-in-out infinite;
+    -moz-animation: animate 3s ease-in-out infinite;
+    -o-animation: animate 3s ease-in-out infinite;
+    -webkit-animation: animate 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes animate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+    
+}
+
+hr{
+    animation: slide 2s linear infinite ;
+    border: 1.5px solid white;
+    
+}
+
+@keyframes slide {
+    50%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+
+    0%{
+        left: -100%;
+    }
+    
+}
